@@ -1,0 +1,32 @@
+/* CreateFolderButton.css */
+.create-folder-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    border-radius: 50% !important;
+    transition: background-color 0.5s ease-in-out;
+
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+.create-folder-button:hover {
+    transition: background-color 0.5s ease-in-out;
+    background-color: #FFB90B !important;
+}
+
+.button-icon {
+    width: 30px;
+    /* Adjust the icon size as needed */
+    height: auto;
+    transition: fill 0.5s ease;
+    fill: #FFB90B;
+}
+
+.create-folder-button:hover .button-icon {
+    fill: #FFFFFF;
+    /* Change to white */
+}

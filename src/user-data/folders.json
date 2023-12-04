@@ -1,0 +1,86 @@
+{
+  "main_folder": {
+    "sub_folder": {
+      "sub_sub_folder": {
+        "filename": "Hello world!",
+        "okay": {
+          "new": {},
+          "space test": {}
+        }
+      }
+    },
+    "sub_folder2": {
+      "1": {},
+      "2": {
+        "test folder with space": {}
+      },
+      "3": {},
+      "4": {},
+      "5": {},
+      "6": {},
+      "7": {},
+      "8": {},
+      "9": {},
+      "10": {},
+      "11": {},
+      "12": {},
+      "13": {},
+      "14": {},
+      "15": {},
+      "16": {},
+      "17": {},
+      "18": {},
+      "19": {},
+      "20": {},
+      "21": {},
+      "22": {},
+      "23": {},
+      "24": {}
+    }
+  },
+  "games": {
+    "minigames": {
+      "Among Us": {
+        "data": {},
+        "assets": {}
+      }
+    },
+    "rpg": {
+      "Elden Ring": {
+        "data": {},
+        "assets": {}
+      },
+      "The Witcher 3": {
+        "data": {},
+        "assets": {}
+      }
+    },
+    "simulation": {
+      "Cities Skylines": {
+        "data": {},
+        "assets": {}
+      },
+      "The Sims 4": {
+        "data": {},
+        "assets": {}
+      }
+    }
+  },
+  "music": {
+    "rock": {
+      "metal": {}
+    },
+    "pop": {
+      "lo-fi": {},
+      "hip-hop": {}
+    }
+  },
+  "pictures": {
+    "dogs": {
+      "german": {}
+    },
+    "cats": {},
+    "zebras": {},
+    "new": {}
+  }
+}
