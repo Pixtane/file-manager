@@ -1,9 +1,8 @@
 import React from "react";
 import folderImage from "../assets/folder.png";
-import "./styles/Card.css";
 
 interface Props {
-  type: "folder" | "file";
+  type?: "folder" | "file";
   children: React.ReactNode;
   onClick: (text: string) => void; // Accepting event parameter
   onContextMenu: (text: string) => void;
@@ -25,7 +24,7 @@ const Card = ({ type, children, onClick, onContextMenu }: Props) => {
   return (
     <div onClick={handleClick} onContextMenu={handleRightClick}>
       <img
-        src={folderImage}
+        src={type === "folder" ? folderImage : ""}
         className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
         alt=""
       ></img>

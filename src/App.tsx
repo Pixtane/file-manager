@@ -1,4 +1,4 @@
-import { ReactNode, useState, useMemo } from "react";
+import { ReactNode, useState } from "react";
 import "./App.css";
 import Card from "./components/Card";
 import MemoizedAlert from "./components/Alert";
@@ -104,18 +104,24 @@ function App() {
 
       const sendData = async (data: any) => {
         try {
-          const response = await axios.post(
-            "http://localhost:3001/submitData",
-            data
-          );
+          const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
+
+          if (!apiUrl) {
+            console.error("API URL is not defined.");
+            return;
+          }
+
+          const response = await axios.post(apiUrl, data);
           console.log(response.data);
         } catch (error: any) {
           console.error("Error sending data:", error.message);
         }
       };
 
-      // Call the function to send data
-      sendData(updatedJsonData);
+      // Assert that REACT_APP_API_URL is defined before calling sendData
+      if (import.meta.env.VITE_REACT_APP_API_URL) {
+        sendData(updatedJsonData);
+      }
     };
     addNewObject(myPath, name);
     setIsMiniFormVisible(false);
@@ -171,18 +177,24 @@ function App() {
 
       const sendData = async (data: any) => {
         try {
-          const response = await axios.post(
-            "http://localhost:3001/submitData",
-            data
-          );
+          const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
+
+          if (!apiUrl) {
+            console.error("API URL is not defined.");
+            return;
+          }
+
+          const response = await axios.post(apiUrl, data);
           console.log(response.data);
         } catch (error: any) {
           console.error("Error sending data:", error.message);
         }
       };
 
-      // Call the function to send data
-      sendData(updatedJsonData);
+      // Assert that REACT_APP_API_URL is defined before calling sendData
+      if (import.meta.env.VITE_REACT_APP_API_URL) {
+        sendData(updatedJsonData);
+      }
     };
 
     removeObject(myPath, activeFolder);
@@ -262,7 +274,7 @@ function App() {
   }
 
   const path2 = new URLSearchParams(location.search).get("path");
-  const memoizedCardList = useMemo(() => returnCardList(path2), [path2]);
+  //const memoizedCardList = useMemo(() => returnCardList(path2), [path2]);
   return (
     <>
       <div className="container text-center">

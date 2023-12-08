@@ -1,5 +1,4 @@
 import { Button } from "react-bootstrap";
-import myIcon from "../assets/new_folder.svg";
 import "./styles/CreateFolderButton.css";
 
 interface Props {

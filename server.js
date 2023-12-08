@@ -4,9 +4,11 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import fs from "fs";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT;
 
 // Use bodyParser middleware to parse JSON requests
 app.use(bodyParser.json());

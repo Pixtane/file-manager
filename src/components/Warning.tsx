@@ -28,7 +28,6 @@ const MiniForm = ({
   const handleSubmit = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    console.log("Submit", event);
     event.preventDefault();
     onAccept();
   };
@@ -36,7 +35,6 @@ const MiniForm = ({
   const handleDecline = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    console.log("Decline", event);
     event.preventDefault();
     onDecline();
   };
